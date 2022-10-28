@@ -61,6 +61,7 @@
         Állítsd be az onChangePhrase($event) metódust az input elem
         keyup eseményére.
        -->
+
       <input
         class="form-control mr-sm-2"
         type="text"
@@ -76,10 +77,10 @@
 <div class="container">
   <div class="row">
     <div class="col-8">
-      ...
+      <app-data-list [dataList] = "users" (selectClick) = "selectButton($event)" (updateClick) = "updateButton($event)" (deleteClick) = "deleteButton($event)"> </app-data-list>>
     </div>
     <div class="col-4">
-      ...
+      <app-user-detail [user]="currentUser" (delUser) = "deleteButton($event)"> </app-user-detail>
     </div>
   </div>
 </div>
